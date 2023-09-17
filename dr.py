@@ -1,7 +1,3 @@
-import blocksmith 
-import random
-import time
-import sys
 with open("n.txt", "a") as f:
     
     def convert_to_hex(line):
