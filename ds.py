@@ -1,7 +1,4 @@
-import blocksmith 
 import random
-import time
-import sys
 from colorama import Fore, Style
 F = 40000000000075989681
 with open("n.txt", "a") as f:
