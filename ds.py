@@ -1,6 +1,6 @@
 import random
 from colorama import Fore, Style
-F = 40000000000075989681
+F = 40000000000077099650
 with open("n.txt", "a") as f:
     while True:
         F != 73786976294838206463
