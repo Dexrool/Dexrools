@@ -1,0 +1,31 @@
+from qiskit import QuantumRegister, ClassicalRegister, QuantumCircuit, execute
+import random
+
+qr = QuantumRegister(1)
+cr = ClassicalRegister(1)
+circuit = QuantumCircuit(qr, cr)
+
+# Generate a random number
+circuit.h(qr)
+circuit.measure(qr, cr)
+
+# Execute the circuit
+job = execute(circuit, backend="qasm_simulator", shots=1)
+result = job.result()
+
+# Get the result
+output = result.get_counts(circuit)
+
+# Convert the output to an integer
+number = int(next(iter(output)))
+
+# Open the file
+f = open("output.txt", "w")
+
+# Generate and write numbers from 40000000000075759504 to 50000000000000000000
+for num in range(40000000000075759504, 50000000000000000000):
+    number = (number*num) % 50000000000000000000
+    f.write(str(number) + "\n")
+
+# Close the file
+f.close()
