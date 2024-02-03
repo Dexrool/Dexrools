@@ -17,7 +17,7 @@ prefix = input("Введите префикс:")
 M = len(prefix)
 V = 34 - M
 H = str(prefix[:V])
-#F = 40000000000142716216
+#F = 40000000000151157096
 #start_time = time.time()
 with open("n.txt", "a") as f:
     while True:
