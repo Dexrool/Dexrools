@@ -1,0 +1,112 @@
+import blocksmith 
+import random
+import time
+import sys
+from colorama import Fore, Style
+import requests
+import hashlib
+import binascii
+import random
+import datetime
+past_time = datetime.datetime.now()
+s = 0
+generated_numbers = set()
+while True:
+    
+
+    FZ = random.randint(37253776117608742912,48422703193487572992)
+    MZ = random.randint(48422703193487572992,66869447267197124698)
+    NZ = random.randint(66869447267197124698,73422184725021196288)
+    NP = random.randint(36893488147419103232,73786976294838206463)
+    
+    
+
+    U = "13zb1hQbWVsc2S7ZTZnP2G4undNNpdh5so"
+    F = '00000000000000000000000000000000000000000000000' + format(FZ, '016x')
+    Y = '00000000000000000000000000000000000000000000000' + format(MZ, '016x')
+    M = '00000000000000000000000000000000000000000000000' + format(NZ, '016x')
+    N = '00000000000000000000000000000000000000000000000' + format(NP, '016x')
+    #AD = "13zb1hQbWVsc2S7ZTZnP2G4undNNpdh5so"
+    AD = blocksmith.BitcoinWallet.generate_compressed_address(F)
+    YD = blocksmith.BitcoinWallet.generate_compressed_address(Y)
+    
+    AM = blocksmith.BitcoinWallet.generate_compressed_address(M)
+    
+    AN = blocksmith.BitcoinWallet.generate_compressed_address(N)
+    
+    # 1JUP2bjfVexDif2m5fgyjHFrV9FE494REN
+        
+    print("\033c", end="")
+    
+    
+    
+    print(Fore.RED + "AD: " + AD)
+    
+    print(Fore.RED + "DEC: " + str(FZ))
+    
+    print(Fore.RED + "HEX: " + F)
+    print("[20-2А]")
+    print("******************************************")
+    ##############
+    print(Fore.RED + "AD: " + YD)
+    
+    print(Fore.RED + "DEC: " + str(NP))
+    
+    print(Fore.RED + "HEX: " + Y)
+    print("[2A-3A]")
+    print("******************************************")
+    ##############
+    print(Fore.GREEN + "AM: " + AM)
+    
+    print(Fore.GREEN + "DEC: " + str(MZ))
+    
+    print(Fore.GREEN + "HEX: " + M)
+    print("[3A-3F]")
+    print("******************************************")
+    ##############
+    print(Fore.YELLOW + "AN: " + AN)
+    
+    print(Fore.YELLOW + "DEC: " + str(NZ))
+    
+    print(Fore.YELLOW + "HEX: " + N)
+    print("******************************************")
+    
+
+# Задайте определенный момент в прошлом
+    
+    
+    # Получите текущий момент
+    current_time = datetime.datetime.now()
+    
+    # Вычислите разницу между текущим и прошлым моментами
+    time_diff = current_time - past_time
+    
+    # Выведите разницу в виде строкового представления с указанием дней, часов, минут и секунд
+    print("Время прошло:", time_diff)
+   
+    
+    if AD == U:
+        with open("n.txt", "a") as f:
+            print(Fore.RED + "ВНИМАНИЕ НАЙДЕН PRIVATE KEY")
+            f.write(AD + "\n")
+            f.write(str(F) + "\n")
+            break
+    if AD == U:
+        with open("n.txt", "a") as f:
+            print(Fore.RED + "ВНИМАНИЕ НАЙДЕН PRIVATE KEY")
+            f.write(YD + "\n")
+            f.write(str(Y) + "\n")
+            break
+    if AM == U:
+        with open("n.txt", "a") as f:
+            print(Fore.RED + "ВНИМАНИЕ НАЙДЕН PRIVATE KEY")
+            f.write(AM + "\n")
+            f.write(str(M) + "\n")
+            break
+        
+    if AN == U:
+        with open("n.txt", "a") as f:
+            print(Fore.RED + "ВНИМАНИЕ НАЙДЕН PRIVATE KEY")
+            f.write(AN + "\n")
+            f.write(str(N) + "\n")
+            break
